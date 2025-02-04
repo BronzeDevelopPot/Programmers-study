@@ -2,11 +2,11 @@ function solution(begin, target, words) {
   const visited = [];
   const queue = [];
 
-  let changeCount = 0;
+  let answer = 0;
 
   if (!words.includes(target)) return 0;
 
-  queue.push([begin, changeCount]);
+  queue.push([begin, answer]);
 
   while (queue) {
     let [value, count] = queue.shift();
@@ -31,5 +31,5 @@ function solution(begin, target, words) {
     });
   }
 
-  return changeCount;
+  return answer;
 }
